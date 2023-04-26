@@ -26,23 +26,46 @@ body {
 .intro {
     position: fixed;
     width: -webkit-fill-available;
-    top: 50%;
+    bottom: 30%;
+    right: 1%;
+    width: fit-content;
+}
+
+.name {
+    font-size: 6vw!important;
+}
+
+.name-blue{
+    color: #5862d2;
+}
+
+.name-green{
+    color: #2ab172d9;
+}
+
+.p1, .p2, .p3, .name {
+    font-family: 'chakra petch', Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 4vw;
+    color: snow;
+    /* text-align: end; */
+    transition: 0.1ms;
 }
 
 .p1, .p2, .p3 {
-    font-family: 'chakra petch', Verdana, sans-serif;
-    font-weight: 600;
-    font-size: 6vh;
-    color: snow;
-    text-align: end;
+    line-height: 5vw;
 }
 
 .p3 {
     width: fit-content;
-    right: 1px;
+    right: 5%;
     position: absolute;
     background: white;
     color: #37383a;
+}
+
+.quotes {
+    color: goldenrod;
 }
 
 .code-anim {
@@ -326,6 +349,9 @@ body {
         display: none !important;
     }
 
+    .fa-xmark {
+        left: 90%!important;
+    }
     
 
     .blocker {
@@ -385,6 +411,9 @@ body {
     .fa-rocket {
         font-size: xx-large!important;
     }
+    .fa-xmark {
+        left: 80%!important;
+    }
 }
 @media (orientation:landscape) and (max-height: 540px)  {
     .apod-card{
@@ -417,6 +446,16 @@ body {
     .apod-vid {
         max-height: 50vw;
     }
+    .fa-xmark {
+        left: 92%!important;
+    }
+    .fa-minus {
+        margin-left: -20px!important;
+        margin-right: -20px!important;
+    }
+    .fa-rocket {
+        font-size: 1.3rem!important;
+    }
     
 }
 
@@ -433,6 +472,7 @@ body {
         object-fit: cover;
         min-width: 88vw;
     }
+    
 }
 
 
@@ -468,12 +508,23 @@ body {
     font-size: 2.7rem;
     top: 24px;
 }
-.fa-dice:hover {
+
+.fa-xmark {
+    color: #d3d4d4;
+    position: fixed;
+    top: 1%;
+    left: 80%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.fa-dice:hover, .fa-xmark:hover {
     /* font-size: 3rem; */
     transform: scale(1.12);
     transition: 300ms;
 }
-.fa-dice:active {
+
+.fa-dice:active, .fa-xmark:active {
     /* font-size: 2.6rem; */
     transform: scale(0.9);
     transition: 200ms;
@@ -483,11 +534,15 @@ body {
     font-size: xxx-large;
 }
 
+.click:hover > .fa-rocket {
+    scale: 1.2;
+}
+
 .fa-minus {
     color: #ffffff;
     margin-left: -28px;
     margin-right: -28px;
-    font-size: 5vw;
+    font-size: 5.5vw;
     animation-duration: 1s;
     animation: pulse 1s infinite;
 }
