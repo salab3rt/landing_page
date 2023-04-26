@@ -4,7 +4,7 @@ $(document).ready(function() {
     var clic = $('.click');
     var apodLink = $('#apod-link');
     var apod = {
-        "url": "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
+        "url": "https://api.nasa.gov/planetary/apod",
         "method": "GET",
         "timeout": 0,
     };
