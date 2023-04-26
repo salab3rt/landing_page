@@ -4,7 +4,7 @@ $(document).ready(function() {
     var clic = $('.click');
     var apodLink = $('#apod-link');
     var apod = {
-        "url": "https://api.nasa.gov/planetary/apod",
+        "url": "https://api.nasa.gov/planetary/apod?api_key",
         "method": "GET",
         "timeout": 0,
     };
@@ -15,7 +15,14 @@ $(document).ready(function() {
         "timeout": 0,
     };
     var apodVid = '<iframe id="apod-vid" width="100%" height="auto" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-      
+    
+
+    $('#c').delay(1500).fadeIn('fast');
+    $('#o').delay(1700).fadeIn('fast');
+    $('#d').delay(1900).fadeIn('fast');
+    $('#e').delay(2100).fadeIn('fast');
+
+
     $('a[href="#modal-apod"]').click(function(event) {
         event.preventDefault();
         $(this).modal({
@@ -92,7 +99,10 @@ $(document).ready(function() {
         }
         trig.addClass('trig-anim-in');
         $('.apod-card').css('display', 'block');
-
+        $('.fa-rocket').addClass('fa-shake');
+        $('.fa-rocket').css('--fa-animation-duration', '0.75s');
+        
+        
         $('.tri').addClass('tri1').fadeIn('slow');
         if (canslide) {
             $( ".apod-side-title" ).toggle( "slide right" );

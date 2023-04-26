@@ -11,24 +11,33 @@
         <link rel="manifest" href=”static/site.webmanifest” crossorigin="use-credentials" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.5.1/tailwind.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-        <link rel="stylesheet" href="static/styles.css">
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
         <script src="static/js/anim.js"></script>
-        <script src="https://kit.fontawesome.com/073c78d683.js" crossorigin="anonymous"></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://kit.fontawesome.com/073c78d683.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="static/styles.css">
         <title>salab3rt</title>
     </head>
 
     <body>
-        <div class="content">
             <div class="cover"></div>
             <div class="intro">
                 <p class="p1">From the lab to <span>coding</span>,</p>
                 <p class="p2">debugging and <span>"decontaminating"</span></p>
-                <p class="p3"> <span><</span>code></p>
+                <p class="p3">
+                    <span><</span>
+                    <span id="c" class="code-anim">c</span>
+                    <span id="o" class="code-anim">o</span>
+                    <span id="d" class="code-anim">d</span>
+                    <span id="e" class="code-anim">e</span>
+                    <span>
+                        <i class="fa-sharp fa-solid fa-minus fa-rotate-90" style="color: #37383a;"></i>
+                    </span>
+                    >
+                </p>
             </div>
             <div class="tri-wrap">
                 <div class="tri-box card">
@@ -56,7 +65,7 @@
                         </div>
                     </div>
                     <div class="click">
-                        <p><span><</span>APOD></p>
+                        <i class="fa-solid fa-rocket" style="color: #ffffff;"></i>
                     </div>
                 </div>
                 <div class="disc mt-0 mb-0 hidden">
@@ -72,7 +81,6 @@
             <div id="modal-apod" class="modal p-3">
                 <img class="" src="" alt="" id="apod-img-modal">
             </div>
-        </div>
         
         
     </body>
