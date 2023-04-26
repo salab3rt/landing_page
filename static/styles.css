@@ -1,0 +1,465 @@
+/* @import url("https://fonts.googleapis.com/css?family=Geo&display=swap"); */
+@import url("https://fonts.cdnfonts.com/css/chakra-petch");
+@import url("https://fonts.cdnfonts.com/css/8bit-wonder");
+
+body {
+    min-height: 100vh;
+    background-color: rgba(14, 20, 29, 0.92);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #444444;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+.p1 {
+    font-family: 'chakra petch', Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 3vw;
+    position: fixed;
+    color: #686868;;
+}
+
+.cover {
+    background-image: url(./img/jpeg-optimizer_markus-spiske-cvBBO4PzWPg-unsplash.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.01;
+}
+
+
+
+.tri-wrap {
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.tri-box {
+    height: 100%;
+    width: -webkit-fil-available;
+    clip-path: polygon(0 80%, 0 100%, 17% 100%, 0 80%);
+    overflow: hidden;
+}
+
+.tri {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px inset;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(58, 59, 59, 0.74);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tri::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/nic-chi-guvnhd3hbxw-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.22;
+    transition: opacity 1s;
+    cursor: pointer;
+}
+
+.tri1::after {
+    opacity: 0.05;
+    cursor: default !important;
+}
+
+.trig-anim-in {
+    animation: animate-trig-in 1s linear forwards;
+}
+
+.trig-anim-out {
+    animation: animate-trig-out 1s linear forwards;
+}
+
+@keyframes animate-trig-in {
+    0% {
+        clip-path: polygon(0 80%, 0 100%, 17% 100%, 0 80%);
+    }
+
+    20% {
+        clip-path: polygon(0 80%, 0 100%, 33% 100%, 0 53%);
+    }
+
+    40% {
+        clip-path: polygon(0 0, 0 100%, 41% 100%, 0 0);
+    }
+
+    60% {
+        clip-path: polygon(0 0, 0 100%, 41% 100%, 21% 0);
+    }
+
+    80% {
+        clip-path: polygon(0 0, 0 100%, 41% 100%, 41% 0);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 0 100%, 76% 100%, 85% 0);
+    }
+
+    /* 100% {
+        clip-path: polygon(0 0, 0 100%, 65% 100%, 51% 0);
+    } */
+}
+
+@keyframes animate-trig-out {
+    0% {
+        clip-path: polygon(0 0, 0 100%, 76% 100%, 85% 0);
+    }
+
+    20% {
+        clip-path: polygon(0 0, 0 100%, 41% 100%, 41% 0);
+    }
+
+    40% {
+        clip-path: polygon(0 0, 0 100%, 41% 100%, 21% 0);
+    }
+
+    60% {
+        clip-path: polygon(0 0, 0 100%, 41% 100%, 0 0);
+    }
+
+    80% {
+        clip-path: polygon(0 80%, 0 100%, 33% 100%, 0 53%);
+    }
+
+    100% {
+        clip-path: polygon(0 80%, 0 100%, 17% 100%, 0 80%);
+    }
+}
+
+/* https://bennettfeely.com/clippy/ */
+
+.click {
+    position: relative;
+    width: fit-content;
+    top: -3%;
+    color: ivory;
+    rotate: 0deg;
+    left: 1%;
+    font-family: "8BIT WONDER";
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.click-anim {
+    animation: click-anim1 1s ease-in-out forwards;
+}
+
+.click-anim-rev {
+    animation: click-anim1 1s ease-in-out reverse;
+}
+
+@keyframes click-anim1 {
+    from {
+        translate: none;
+    }
+
+    to {
+        translate: 0px 100px;
+    }
+}
+
+.card-wrap {
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    width: 80vw;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.apod-card {
+    /* top: 5vh;
+    left: 25vh; */
+    background-color: #21262d;
+    position: relative;
+    display: block;
+    filter: drop-shadow(0px 0px 8px rgb(231, 219, 151));
+    /* left: 10vw; */
+    max-height: 82%;
+    width: -webkit-fill-avaliable;
+}
+
+.disc-wrap {
+    min-height: 20%;
+    max-height: 35%;
+}
+
+.apod-description {
+    max-height: 20vh;
+    overflow-y: auto;
+    height: 15vh;
+}
+
+.disc {
+    font-family: "chakra petch";
+    width: fit-content;
+    position: absolute;
+    top: 0%;
+    right: 5vw;
+    color: rgba(31, 41, 55, 0.92);
+    height: 100%;
+}
+
+.side-title {
+    font-size: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 10vw;
+    color: transparent;
+    filter: drop-shadow(0px 0px 3px rgb(231, 219, 151));
+    -webkit-text-stroke: 2px rgb(119, 117, 117);
+    pointer-events: none;
+    /* filter: drop-shadow(10px 12px 4px rgba(14, 30, 37, 0.72)); */
+}
+
+.apod-side-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 600;
+    background-color: rgba(58, 59, 59, 0.74);
+    width: max-content;
+    color: snow;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 2vh;
+    height: 100%;
+    display: none;
+    pointer-events: none;
+}
+
+.modal {
+    padding: 100px;
+    /* Location of the box */
+    background: #ffffff50;
+    width: 98vh;
+    width: 98vh;
+    min-width: fit-content;
+    max-width: 98vw;
+    /* background-image: url('./img/nic-chi-guvnhd3hbxw-unsplash.jpg'); */
+}
+
+.apod-img-modal {
+    max-width: auto;
+}
+
+#apod-img {
+    min-width: 80vw;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 5px;
+    border-radius: 0.5rem;
+}
+
+#apod-link h5:hover{
+    transform-origin: 0%;
+    transition: 50ms;
+}
+
+@media (max-width: 1024px) {
+    .card-wrap {
+        width: 90vw;
+    }
+
+    .apod-card {
+        left: 4%;
+    }
+
+    .apod-title {
+        font-size: 2rem;
+    }
+
+    .disc {
+        display: none !important;
+    }
+
+    
+
+    .blocker {
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes animate-trig-in {
+        0% {
+            clip-path: polygon(0 80%, 0 100%, 17% 100%, 0 80%);
+        }
+
+        20% {
+            clip-path: polygon(0 80%, 0 100%, 33% 100%, 0 53%);
+        }
+
+        40% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 0 0);
+        }
+
+        60% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 21% 0);
+        }
+
+        80% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 41% 0);
+        }
+
+        100% {
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .apod-card {
+        left: 2%;
+    }
+
+    .apod-title {
+        font-size: 1.1rem!important;
+    }    
+    .click > p {
+        font-size: xx-small;
+        text-orientation: upright;
+        writing-mode: tb;
+    }
+    .click {
+        top: -10%!important;
+
+    }
+}
+@media (orientation:landscape) and (max-height: 540px)  {
+    .apod-card{
+        display: block;
+        rotate: 90deg;
+        max-width: 92vh;
+        height: 100vw;
+        max-height: 82vw;
+    }
+    #apod-img {
+        min-width: 50vh;
+        min-height: 50vw;
+    }
+    .apod-description {
+        max-height: 20vw;
+        overflow: auto;
+        height: 15vw;
+    }
+    .apod-side-title {
+        writing-mode:sideways-lr;
+        text-orientation: sideways;
+        font-size: 5vh;
+    }
+    .apod-title {
+        font-size: 1.1rem!important;
+    } 
+    .click > p {
+        font-size: xx-small;
+    }
+    .apod-vid {
+        max-height: 50vw;
+    }
+    
+}
+
+
+
+@media (min-width: 1024px) {
+    .apod-card {
+        max-width: 65%;
+    }
+    #apod-img {
+        min-width: 100%!important;
+    }
+    #apod-img-modal {
+        object-fit: cover;
+        min-width: 88vw;
+    }
+}
+
+
+@media (orientation:landscape) {
+    
+    .modal {
+        width: 98vh;
+        min-width: fit-content;
+    }
+}
+
+#modal-apod img {
+    object-fit: none;
+    min-width: max-content;
+}
+
+#modal-apod {
+    align-self: baseline;
+    min-width: max-content;
+    width: fit-content;
+}
+
+.blocker {
+    overflow: auto;
+    justify-content: flex-start;
+    padding: 5%;
+}
+
+.fa-dice {
+    color: #d3d4d4;
+    position: absolute;
+    right: 20px;
+    font-size: 2.7rem;
+    top: 24px;
+}
+.fa-dice:hover {
+    /* font-size: 3rem; */
+    transform: scale(1.12);
+    transition: 300ms;
+}
+.fa-dice:active {
+    /* font-size: 2.6rem; */
+    transform: scale(0.9);
+    transition: 200ms;
+}
+
+
+.apod-vid {
+    max-height: 50vh!important;
+    width: -webkit-fill-available;
+}
+
+iframe {
+    min-height: inherit;
+}
+/* "From the lab to the codebase, my passion for problem-solving applied  to a new ...." */
+/* "From the lab to coding,  debugging and "decontaminating" code." */
+

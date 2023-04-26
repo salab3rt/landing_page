@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
+        <link rel="manifest" href=”static/site.webmanifest” crossorigin="use-credentials" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.5.1/tailwind.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <link rel="apple-touch-icon" sizes="180x180" href="static/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon-16x16.png">
+        <link rel="stylesheet" href="static/styles.css">
+        <title>salab3rt</title>
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="cover"></div>
+            <p class="p1">From the lab to <span>coding</span>, debugging & <span>"decontaminating"</span> code.</p>
+            <div class="tri-wrap">
+                <div class="tri-box card">
+                    <div class="tri h-screen">
+                        <div class="card-wrap">
+                            <div class="apod-card border border-gray-200 rounded-lg shadow dark:border-gray-700">
+                                <a href="#modal-apod">
+                                    <div id="apod-img"></div>
+                                    <i class="fa-solid fa-dice" style="color: #d3d4d4; " id="getrandomapod"></i>
+                                </a>
+                                <div class="p-5 disc-wrap">
+                                    <a href="" target="_blank" id="apod-link">
+                                        <h5
+                                            class=" apod-title mb-2 text-2xl font-bold tracking-tight text-gray-200 dark:text-white">
+                                            Placeholder</h5>
+                                        <h6
+                                            class="apod-author mb-2 text-sm tracking-tight text-gray-200 dark:text-white">
+                                            Placeholder</h6>
+                                        <hr class="mt-0">
+                                    </a>
+                                    <p class="apod-description mt-2 mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                        Placeholder.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="click">
+                        <p>NASA APOD</p>
+                    </div>
+                </div>
+                <div class="disc mt-0 mb-0 hidden">
+                    <ul class="side-title font-extrabold font-gray-800">
+                        <li>A </li>
+                        <li>P </li>
+                        <li>O </li>
+                        <li>D </li>
+                    </ul>
+                </div>
+                <p class="apod-side-title">NASA Astronomy Picture of the Day</p>
+            </div>
+            <div id="modal-apod" class="modal p-3">
+                <img class="" src="" alt="" id="apod-img-modal">
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/073c78d683.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="static/js/anim.js"></script>
+    </body>
+
+</html>
