@@ -16,7 +16,6 @@ $(document).ready(function() {
     };
     var apodVid = '<iframe id="apod-vid" width="100%" height="auto" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     
-
     $('#c').delay(1500).fadeIn('fast');
     $('#o').delay(1700).fadeIn('fast');
     $('#d').delay(1900).fadeIn('fast');
@@ -102,6 +101,7 @@ $(document).ready(function() {
         $('.fa-rocket').addClass('fa-shake');
         $('.fa-rocket').css('--fa-animation-duration', '0.75s');
         $('.intro').fadeOut('slow');
+
 
         
         

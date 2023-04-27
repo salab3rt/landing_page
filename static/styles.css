@@ -1,6 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Geo&display=swap"); */
 @import url("https://fonts.cdnfonts.com/css/chakra-petch");
-@import url("https://fonts.cdnfonts.com/css/8bit-wonder");
 
 body {
     min-height: 100vh;
@@ -23,12 +21,25 @@ body {
     background: #ffffff;
 }
 
-.intro {
-    position: fixed;
-    width: -webkit-fill-available;
+.intro-wrap {
+    display: none;
+    position: absolute;
+    /* width: -webkit-fill-available; */
     bottom: 30%;
-    right: 1%;
-    width: fit-content;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: row-reverse;
+    transition: 1s;
+    animation: fadeIn ease-in 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.intro {
+    right: 3%;
 }
 
 .name {
@@ -56,10 +67,14 @@ body {
     line-height: 5vw;
 }
 
+.p1 {
+    min-width: 70vw;
+}
+
 .p3 {
     width: fit-content;
     right: 5%;
-    position: absolute;
+    /* position: absolute; */
     background: white;
     color: #37383a;
 }
@@ -126,7 +141,7 @@ body {
 
 .tri1::after {
     opacity: 0.05;
-    cursor: default !important;
+    cursor: default;
 }
 
 .trig-anim-in {
@@ -189,7 +204,7 @@ body {
     }
 
     100% {
-        clip-path: polygon(0 80%, 0 100%, 17% 100%, 0 80%);
+        clip-path: polygon(0 65%, 0 100%, 10% 100%, 0 85%)
     }
 }
 
@@ -332,6 +347,25 @@ body {
     transition: 50ms;
 }
 
+
+@media (max-width:1024px) and (orientation:portrait) {
+    .p1, .p2, .p3 {
+        font-size: 10vw;
+        line-height: 12vw;
+        text-align: end;
+    }
+    .name {
+        font-size: 15vw!important;
+        line-height: 12vw;
+        padding-bottom: 15vw;
+    }
+    .fa-minus {
+        margin-left: -10px!important;
+        margin-right: -10px!important;
+        font-size: 11vw!important;
+    }
+}
+
 @media (max-width: 1024px) {
     .card-wrap {
         width: 90vw;
@@ -364,6 +398,10 @@ body {
         justify-content: center;
     }
 
+    .tri-box {
+        clip-path: polygon(0 65%, 0 100%, 20% 100%, 0 88%);
+    }
+
     @keyframes animate-trig-in {
         0% {
             clip-path: polygon(0 80%, 0 100%, 17% 100%, 0 80%);
@@ -387,6 +425,32 @@ body {
 
         100% {
             clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+        }
+    }
+
+    @keyframes animate-trig-out {
+        0% {
+            clip-path: polygon(0 0, 0 100%, 76% 100%, 85% 0);
+        }
+    
+        20% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 41% 0);
+        }
+    
+        40% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 21% 0);
+        }
+    
+        60% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 0 0);
+        }
+    
+        80% {
+            clip-path: polygon(0 80%, 0 100%, 33% 100%, 0 53%);
+        }
+    
+        100% {
+            clip-path: polygon(0 65%, 0 100%, 20% 100%, 0 88%);
         }
     }
 }
@@ -414,6 +478,52 @@ body {
     .fa-xmark {
         left: 80%!important;
     }
+
+    .p1, .p2, .p3 {
+        font-size: 10vw;
+        line-height: 12vw;
+        text-align: end;
+    }
+    .name {
+        font-size: 15vw!important;
+        line-height: 12vw;
+        padding-bottom: 15vw;
+    }
+    .fa-minus {
+        margin-left: -10px!important;
+        margin-right: -10px!important;
+        font-size: 11vw!important;
+    }
+    .cover {
+        background-position: 65%;
+    }
+
+    @keyframes animate-trig-out {
+        0% {
+            clip-path: polygon(0 0, 0 100%, 76% 100%, 85% 0);
+        }
+    
+        20% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 41% 0);
+        }
+    
+        40% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 21% 0);
+        }
+    
+        60% {
+            clip-path: polygon(0 0, 0 100%, 41% 100%, 0 0);
+        }
+    
+        80% {
+            clip-path: polygon(0 80%, 0 100%, 33% 100%, 0 53%);
+        }
+    
+        100% {
+            clip-path: polygon(0 65%, 0 100%, 20% 100%, 0 88%);
+        }
+    }
+
 }
 @media (orientation:landscape) and (max-height: 540px)  {
     .apod-card{
@@ -454,7 +564,7 @@ body {
         margin-right: -20px!important;
     }
     .fa-rocket {
-        font-size: 1.3rem!important;
+        font-size: 3vw!important;
     }
     
 }
@@ -542,7 +652,8 @@ body {
     color: #ffffff;
     margin-left: -28px;
     margin-right: -28px;
-    font-size: 5.5vw;
+    margin-bottom: -2px;
+    font-size: 5vw;
     animation-duration: 1s;
     animation: pulse 1s infinite;
 }
