@@ -98,7 +98,17 @@ body {
     background-position-x: 100%;
 }
 
+.links {
+    position: absolute;
+    font-size: 3vw;
+    color: #fff;
+    bottom: 10%;
+    right: 10%;
+}
 
+.links li {
+    display: inline;
+}
 
 .tri-wrap {
     width: auto;
