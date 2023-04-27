@@ -103,11 +103,17 @@ body {
     font-size: 3vw;
     color: #fff;
     bottom: 10%;
-    right: 10%;
+    right: 6%;
+    z-index: 1;
 }
 
 .links li {
     display: inline;
+}
+
+.fa-square-github, .fa-linkedin, .fa-envelope {
+    display: inline-block;
+    position: relative;
 }
 
 .tri-wrap {
@@ -374,6 +380,13 @@ body {
         margin-right: -10px!important;
         font-size: 11vw!important;
     }
+
+    .fa-brands, .fa-envelope {
+        font-size: 9vw;
+    }
+    .links {
+        right: 8%;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -396,7 +409,10 @@ body {
     .fa-xmark {
         left: 90%!important;
     }
-    
+    .links {
+        bottom: 1%;
+        transition: 200ms;
+    }
 
     .blocker {
         width: 100vw;
@@ -638,13 +654,15 @@ body {
     cursor: pointer;
 }
 
-.fa-dice:hover, .fa-xmark:hover {
+
+
+.fa-dice:hover, .fa-xmark:hover, .fa-brands:hover, .fa-envelope:hover {
     /* font-size: 3rem; */
     transform: scale(1.12);
     transition: 300ms;
 }
 
-.fa-dice:active, .fa-xmark:active {
+.fa-dice:active, .fa-xmark:active, .fa-brands:active, .fa-envelope:active {
     /* font-size: 2.6rem; */
     transform: scale(0.9);
     transition: 200ms;

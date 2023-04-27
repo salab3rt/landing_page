@@ -1,5 +1,11 @@
 
 $(document).ready(function() {
+
+    screen.orientation.lock();
+    $('.fa-square-github').hide();
+    $('.fa-linkedin').hide();
+    $('.fa-envelope').hide();
+
     var trig = $('.tri-box');
     var clic = $('.click');
     var apodLink = $('#apod-link');
@@ -20,6 +26,9 @@ $(document).ready(function() {
     $('#o').delay(1700).fadeIn('fast');
     $('#d').delay(1900).fadeIn('fast');
     $('#e').delay(2100).fadeIn('fast');
+    $('.fa-square-github').delay(2000).fadeIn('slow');
+    $('.fa-linkedin').delay(2500).fadeIn('slow');
+    $('.fa-envelope').delay(3000).fadeIn('slow');
 
 
     $('a[href="#modal-apod"]').click(function(event) {
