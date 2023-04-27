@@ -1,7 +1,7 @@
 @import url("https://fonts.cdnfonts.com/css/chakra-petch");
 
 body {
-    min-height: 100vh;
+    height: 100%;
     background-color: rgba(14, 20, 29, 0.8);
 }
 
