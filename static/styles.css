@@ -156,9 +156,12 @@ body {
     cursor: pointer;
 }
 
+.tri1::before {
+    cursor: default!important;
+}
+
 .tri1::after {
-    opacity: 0.05;
-    cursor: default;
+    opacity: 0.1;
 }
 
 .trig-anim-in {
@@ -171,7 +174,7 @@ body {
 
 @keyframes animate-trig-in {
     0% {
-        clip-path: polygon(0 80%, 0 100%, 17% 100%, 0 80%);
+        clip-path: polygon(0 65%, 0 100%, 10% 100%, 0 85%);
     }
 
     20% {
@@ -221,7 +224,7 @@ body {
     }
 
     100% {
-        clip-path: polygon(0 65%, 0 100%, 10% 100%, 0 85%)
+        clip-path: polygon(0 65%, 0 100%, 10% 100%, 0 85%);
     }
 }
 
@@ -269,14 +272,16 @@ body {
 .apod-card {
     /* top: 5vh;
     left: 25vh; */
-    background-color: #353637;
     position: relative;
     display: block;
-    filter: drop-shadow(0px 0px 8px rgb(231, 219, 151));
     /* left: 10vw; */
     max-height: 82%;
     width: -webkit-fill-avaliable;
     display: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    /* filter: drop-shadow(0px 0px 8px rgb(231, 219, 151)); */
 }
 
 

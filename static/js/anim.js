@@ -1,11 +1,6 @@
 
 $(document).ready(function() {
 
-    screen.orientation.lock();
-    $('.fa-square-github').hide();
-    $('.fa-linkedin').hide();
-    $('.fa-envelope').hide();
-
     var trig = $('.tri-box');
     var clic = $('.click');
     var apodLink = $('#apod-link');
